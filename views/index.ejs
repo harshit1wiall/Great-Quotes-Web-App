@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel="stylesheet" href="./index.css">
+    </head>
+    <body>
+        <nav>
+            <ul class="nav">
+             <li style="color: aliceblue; margin-left: 40px;"><h1>Greate Quotes</h1></li>
+             <li></li>
+             <li>
+                <ul class="nav-list">
+                    <a href="/products"><li style="margin-right: 50px;">All Quotes</li></a>
+                    <a href="/products/new"><li style="margin-right: 50px;">Add Quotes</li></a>
+                    </ul>
+             </li>   
+            </ul>
+        </nav>
+        <div style="margin-top:5%;">
+        <ul>
+            <% for(let product of products){%>
+                <li class="main">
+                <p><strong><%= product.desc %></strong> </p>
+                <p><i><%= product.name %> </i></p>
+                <a style="background-color: #8ecae6; padding: 16px; margin: 1% 2% 0% 70%;" href="/products/<%= product._id %>">View FullScreen</a>
+                </li>
+            <%}%>
+        </ul>
+    </div>
+    </body>
+</html>

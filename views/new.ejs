@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+*{
+    margin: 0%;
+    padding: 0%;    
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+   font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem; 
+  font-weight: 400;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+}
+ul,ol{
+    list-style-type:none;
+}   
+
+ul{
+    list-style: none;
+}
+.nav1{
+    display: flex;
+    justify-content:space-between;
+    width: 98%;
+    height: 3rem;
+    background-color:#52b788;
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.4);
+    
+}
+.nav1-list{
+    display: flex;
+    margin-right: 2rem;
+    
+}
+
+.nav1 a:hover{
+
+    transition: 10ms;
+    transform: scale(1.03);
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+</style>
+</head>
+<body>
+
+    <nav>
+        <ul class="nav1">
+         <li style="color: aliceblue; margin-left: 40px;"><h1>Greate Quotes</h1></li>
+         <li></li>
+         <li>
+            <ul class="nav1-list">
+                <a href="/products"><li style="margin-right: 50px;">All Quotes</li></a>
+                    <a href="/products/new"><li style="margin-right: 50px;">Add Quotes</li></a>
+                </ul>
+         </li>   
+        </ul>
+    </nav>
+
+
+    <div style="margin: 10% 35%; border: 2px solid black; width: 30%; height: 20%;background-color: beige;">
+<form action="/products" method="post">
+<br>
+<div>
+   
+    <label for="name" >Author</label>
+    <br>
+    <input type="text" name="name" id="name" style="width: 90%; margin:0% 10px; height: 35px;">
+</div>
+<br>
+<br>
+<div>
+    <label for="desc">Text </label>
+    <br>
+    
+    <textarea name="desc" id="desc" cols="30" rows="7"  style="width: 90%; margin:0% 10px;"></textarea>
+</div>
+<br><br>
+<button type="submit" style="margin:0% 0% 2% 80%;height: 35px;width: 90px; background-color: aqua;">Add Quote</button> 
+</form>
+</div>
+</body>
+</html>
